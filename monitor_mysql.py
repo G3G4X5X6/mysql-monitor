@@ -14,6 +14,12 @@ class DbBase(object):
     CHARSET = 'utf8'
 
     def follow(self, file, whence=2):
+        """
+        MySQL查询日志文件读取
+        :param file: 文件指针
+        :param whence: 文件读取位置
+        :return: 读取一行日志
+        """
         # file.seek(off, whence=0)
         # off: 正数往结束方向移动，负数往开始方向移动
         # whence: 0代表从头开始， 1代表当前位置， 2代表文件最末尾位置
